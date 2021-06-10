@@ -1,5 +1,5 @@
 class User < ApplicationRecord
   def to_displayable_string
-    "#{id}. #{first_name} #{last_name} #{email}"
+    "#{id}. #{name} #{email} #{first_name} #{last_name}"
   end
 end
