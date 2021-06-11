@@ -14,15 +14,14 @@ class UsersController < ApplicationController
       email: email,
       password: password,
     )
-    response_text = "Hey, your new user is created with id #{new_user.id}"
-    render plain: response_text
+    response = "Hey, your new user is created with id #{new_user.id}"
+    render plain: response
   end
 
   def login
     email = params[:email]
     password = params[:password]
-    user = User.exists?(email: email, password: password)
-    response_text = user.to_s
-    render plain: response_text
+    response = User.exists?(email: email, password: password)
+    render plain: response
   end
 end
