@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     email = params[:email]
     password = params[:password]
     user = User.exists?(email: email, password: password)
-    response = user.to_s
-    render plain: response
+    response_text = user.to_s
+    render plain: response_text
   end
 end
