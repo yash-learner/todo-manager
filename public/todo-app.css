@@ -12,6 +12,7 @@ body {
   margin-bottom: 12px;
 }
 .AddTodo {
+  display: flex;
   height: 20px;
   align-items: stretch;
   margin-bottom: 36px;
