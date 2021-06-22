@@ -25,6 +25,7 @@ body {
   border-radius: 4px;
   margin-right: 10px;
   padding: 6px 12px;
+  height: 20px;
 }
 
 .AddTodo-date {
@@ -34,6 +35,7 @@ body {
   border-radius: 4px;
   margin-right: 10px;
   padding: 6px;
+  height: 20px;
 }
 .AddTodo-button {
   font-size: 14px;
@@ -43,6 +45,8 @@ body {
   padding: 6px 22px;
   border-radius: 4px;
   text-align: center;
+  height: 35px;
+  cursor: pointer;
 }
 
 .TodoSection {
