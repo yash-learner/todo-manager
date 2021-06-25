@@ -112,3 +112,7 @@ h3 {
   visibility: visible;
   cursor: pointer;
 }
+
+.TodoItem-strike {
+  text-decoration: solid line-through 2px;
+}
