@@ -5,7 +5,7 @@
   </div>
   <ul class = "TodoLinks">
     <% todos.all.each do |todo| %>
-      <% if todo.completed %>
+      <% if !todo.completed %>
         <li class="TodoItem">
           <div class="TodoItem-container">
             <input class="TodoItem-checkbox" type="checkbox" />
