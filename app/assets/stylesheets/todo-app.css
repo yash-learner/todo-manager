@@ -90,12 +90,6 @@ body {
   height: 16px;
 }
 
-.TodoItem-overduelabel {
-  margin-left: 10px;
-  color: #c53030;
-  font-size: 12px;
-}
-
 h3 {
   font-size: 24px;
   line-height: 1.4;
@@ -103,7 +97,18 @@ h3 {
 }
 
 .TodoItem-dateaddded {
-  margin-left: 8px;
-  font-size: 12px;
+  margin-left: 10px;
+  font-size: 10px;
   font-weight: lighter;
+}
+
+.TodoItem-delete {
+  display: inline;
+  margin-left: 8px;
+  visibility: hidden;
+}
+
+.TodoLinks li:hover .TodoItem-delete {
+  visibility: visible;
+  cursor: pointer;
 }
