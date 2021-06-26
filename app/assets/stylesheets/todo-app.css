@@ -103,7 +103,7 @@ h3 {
 }
 
 .TodoItem-delete {
-  display: inline;
+  display: flex;
   margin-left: 8px;
   visibility: hidden;
 }
