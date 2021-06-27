@@ -9,11 +9,10 @@
         <li class="TodoItem">
           <div class="TodoItem-container">
               <%= form_with(url: "/todos/#{todo.id}", method: "put") do %>
-                <input class="TodoItem-checkbox" name =  completed
-                  type="checkbox" <%= todo.completed ? "checked" : "" %>
-                  onclick = "this.form.submit()"/>
+                <%= check_box_tag(:completed, "completed", todo.completed ? true : false,
+                                  onclick: "this.form.submit()", class: "TodoItem-checkbox") %>
               <% end %>
-            <span class='<%= todo.completed ? "TodoItem-strike" : "" %>'> <%= todo.todo_text %></span>
+            <span class="<%= todo.completed ? "TodoItem-strike" : "" %>"> <%= todo.todo_text %></span>
             <p class = "TodoItem-dateaddded">
               <% if show_due_date %>
                 <%= todo.due_date.to_s(:short) %>
@@ -22,7 +21,7 @@
             <a>
               <div class = "TodoItem-delete">
                 <%= form_with(url: "/todos/#{todo.id}", method: "delete") do %>
-                  <input type = 'image' src="delete.png" />
+                  <%= image_submit_tag("delete.png", onclick: "this.form.submit()") %>
               </div>
                 <% end %>
             </a>
