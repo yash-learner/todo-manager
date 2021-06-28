@@ -1,8 +1,5 @@
 class TodosController < ApplicationController
-  # skip_before_action :verify_authenticity_token
-
   def index
-    # render plain: Todo.order(:due_date).map { |todo| todo.to_pleasent__string }.join("\n\n")
     render "index"
   end
 
@@ -20,7 +17,6 @@ class TodosController < ApplicationController
       due_date: due_date,
       completed: false,
     )
-    # response_text = "Hey, your new todo is created with id #{new_todo.id}"
     redirect_to todos_path
   end
 
@@ -30,7 +26,6 @@ class TodosController < ApplicationController
     todo = Todo.find(id)
     todo.completed = completed
     todo.save!
-    # render plain: "Updated todo completed status to #{completed}"
     redirect_to todos_path
   end
 
