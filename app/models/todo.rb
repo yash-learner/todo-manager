@@ -13,7 +13,7 @@ class Todo < ActiveRecord::Base
   end
 
   def self.due_later
-    where("due_date > ?", Date.today)
+    where("due_date > ?", Date.today).order(:due_date)
   end
 
   def self.add_task(todo)
