@@ -5,7 +5,6 @@
   </div>
   <ul class = "TodoLinks">
     <% todos.all.each do |todo| %>
-      <% if section_title != "Overdue" or !todo.completed %>
         <li class="TodoItem">
           <div class="TodoItem-container">
               <%= form_with(url: "/todos/#{todo.id}", method: "put") do %>
@@ -27,7 +26,6 @@
             </a>
           </div>
         </li>
-      <% end %>
     <% end %>
   </ul>
 </section>
