@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # get "todos/:id", to: "todos#show"
 
   get "/", to: "home#index"
+  get "/signin", to: "sessions#new", as: :new_sessions
+  post "/signin", to: "sessions#create", as: :sessions
   # post "users/login", to: "users#login"
   resources :todos
   resources :users
