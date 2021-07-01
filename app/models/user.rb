@@ -8,7 +8,7 @@ class User < ApplicationRecord
 
   def password_requirements
     rules = {
-      "is too short (minimum is 8 characters)"      => /^[a-zA-Z0-9]{8,}$/,
+      "is too short (minimum is 8 characters)"      => /[a-zA-Z0-9]|[A-Za-z0-9]|[0-9a-zA-Z]{8,}$/,
       "must contain at least one lowercase letter"  => /[a-z]+/,
       "must contain at least one uppercase letter"  => /[A-Z]+/,
       "must contain at least one digit"             => /\d+/,
