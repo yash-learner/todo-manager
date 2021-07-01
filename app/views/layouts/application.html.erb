@@ -19,7 +19,7 @@
     <% end %>
     <% if flash[:error] %>
       <p class = "Flash-error">
-        <%= flash[:error] %>
+        <%= flash[:error].html_safe %>
       </p>
     <% end %>
 
