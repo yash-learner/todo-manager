@@ -17,5 +17,7 @@ class ApplicationController < ActionController::Base
     else
       nil
     end
+
   end
+
 end
