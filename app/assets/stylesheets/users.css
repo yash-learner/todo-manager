@@ -1,5 +1,5 @@
 .NewUsers-title {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-size: 30px;
 }
 
@@ -8,13 +8,15 @@
 }
 
 .Form-input {
-  font-size: 20px;
+  font-size: 15px;
   padding: 10px;
+  width: 50%;
+  height: 50%;
 }
 
 .FormInput-label {
   color: #555555;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 .Form-submit {
@@ -27,4 +29,5 @@
   text-align: center;
   height: 35px;
   cursor: pointer;
+  width: 55%;
 }

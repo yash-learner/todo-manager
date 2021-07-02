@@ -1,5 +1,6 @@
 <p class = "NewUsers-title">Welcome new user!</p>
 <section class = "UserNew">
+  <p class = "FormInput-label">Already have an account? <%= link_to "Sign In", new_sessions_path %></p>
   <%= form_with url: users_path do |form| %>
     <div class = "Form-section">
       <p class = "FormInput-label">First name:</p>
