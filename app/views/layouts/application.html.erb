@@ -12,13 +12,13 @@
 
   <body>
     <% if @current_user %>
-      <p class = "UserHeader">
+      <p class="UserHeader">
         Welcome <%= @current_user.first_name %>!
         <%= link_to "Sign Out", destroy_sessions_path, method: "delete" %>
       </p>
     <% end %>
     <% if flash[:error] %>
-      <p class = "Flash-error">
+      <p class="Flash-error">
         <%= flash[:error].html_safe %>
       </p>
     <% end %>
