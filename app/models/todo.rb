@@ -1,15 +1,15 @@
 class Todo < ActiveRecord::Base
   validates :todo_text, presence: true
   validates :todo_text, length: { minimum: 2 }
-  validates :due_date,  presence: true
+  validates :due_date, presence: true
+
   belongs_to :user
+
   def to_pleasent__string
     is_completed = completed ? "[x]" : "[ ]"
     "#{id}. #{due_date.to_s(:long)} #{todo_text} #{is_completed}"
   end
-  # def self.of_user(user)
-  #   where(user_id: user.id)
-  # end
+
   def self.overdue
     where("due_date < ? and (not completed)", Date.today).order(:due_date)
   end
@@ -23,7 +23,11 @@ class Todo < ActiveRecord::Base
   end
 
   def self.add_task(todo)
-    Todo.create!(todo_text: todo[:todo_text], due_date: Date.today + todo[:due_in_days], completed: false)
+    Todo.create!(
+      todo_text: todo[:todo_text],
+      due_date: Date.today + todo[:due_in_days],
+      completed: false,
+    )
   end
 
   def self.completed

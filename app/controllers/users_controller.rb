@@ -5,21 +5,20 @@ class UsersController < ApplicationController
     render "users/new"
   end
 
-
   def create
     user = User.new(
       first_name: params[:first_name],
       last_name: params[:last_name],
       email: params[:email],
-      password: params[:password]
+      password: params[:password],
     )
+
     if user.save
       session[:current_user_id] = user.id
-      redirect_to  "/"
+      redirect_to "/"
     else
       flash[:error] = user.errors.full_messages.join("<br/>")
       redirect_to "/users/new"
     end
   end
-
 end
