@@ -2,6 +2,7 @@ class User < ApplicationRecord
   validates :first_name, :email, :password, presence: true
   validates :first_name, length: { minimum: 3 }
   validate :password_requirements
+  validates :email, uniqueness: { case_sensitive: false }
 
   has_secure_password
   has_many :todos
