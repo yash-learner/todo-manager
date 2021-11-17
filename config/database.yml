@@ -6,8 +6,8 @@ default: &default
 development:
   <<: *default
   host: localhost
-  user: postgres
-  password: USER@postgresql$17
+  user: <%= ENV["POSTGRESQL_USERNAME"] %>
+  password: <%= ENV["POSTGRESQL_PASSWORD"] %>
   database: saas_db
 
 # Warning: The database defined as "test" will be erased and
